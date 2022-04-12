@@ -206,10 +206,10 @@ apt install boxes
 
 # OpenVPN WebSocket
 #port 1194 ( Dropbear) to 2086 (HTTP Websocket)
-wget https://raw.githubusercontent.com/p4p4l3o/vip/main/wsovpn.sh && chmod +x wsovpn.sh && ./wsovpn.sh && rm -f wsovpn.sh
+wget https://raw.githubusercontent.com/p4p4l3o/vip/main/wsovpn.sh && chmod +x wsovpn.sh && sed -i -e 's/\r$//' wsovpn.sh && ./wsovpn.sh && rm -f wsovpn.sh
 
 #OpenVPN
-wget https://raw.githubusercontent.com/p4p4l3o/vip/main/vpn.sh && chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/p4p4l3o/vip/main/vpn.sh && chmod +x vpn.sh && sed -i -e 's/\r$//' vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
