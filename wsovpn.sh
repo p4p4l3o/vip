@@ -9,7 +9,7 @@ echo Cek Hak Akses...
 sleep 0.5
 cd
 cd /usr/local/bin/
-wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/ws-ovpn.py
+wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/p4p4l3o/vip/main/ws-ovpn.py
 chmod +x /usr/local/bin/ws-ovpn
 
 # Installing Service

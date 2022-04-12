@@ -20,7 +20,7 @@ sudo apt-get install nodejs -y
 apt install npm -y
 npm install
 apt install tmux -y
-wget https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/oh.zip
+wget https://raw.githubusercontent.com/p4p4l3o/vip/main/oh.zip
 unzip oh.zip
 
 rm -f /oh.zip

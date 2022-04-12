@@ -21,7 +21,7 @@ commonname=wdkuvpn.tk
 email=gugun@wdkuvpn.tk
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/p4p4l3o/vip/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -92,15 +92,15 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/p4p4l3o/vip/main/nginx.conf"
 mkdir -p /home/vps/public_html
 echo "<pre>Setup by Gugun09</pre>" >/home/vps/public_html/index.html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/p4p4l3o/vip/main/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/p4p4l3o/vip/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -126,7 +126,7 @@ echo "/usr/sbin/nologin" >>/etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/p4p4l3o/vip/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -194,7 +194,7 @@ apt-get install sslh -y
 
 # #konfigurasi
 # #port 3127 to 443
-wget -O /etc/default/sslh "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/sslh.conf"
+wget -O /etc/default/sslh "https://raw.githubusercontent.com/p4p4l3o/vip/main/sslh.conf"
 service sslh restart
 
 # colored text
@@ -206,10 +206,10 @@ apt install boxes
 
 # OpenVPN WebSocket
 #port 1194 ( Dropbear) to 2086 (HTTP Websocket)
-wget https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/wsovpn.sh && chmod +x wsovpn.sh && ./wsovpn.sh && rm -f wsovpn.sh
+wget https://raw.githubusercontent.com/p4p4l3o/vip/main/wsovpn.sh && chmod +x wsovpn.sh && ./wsovpn.sh && rm -f wsovpn.sh
 
 #OpenVPN
-wget https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/vpn.sh && chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/p4p4l3o/vip/main/vpn.sh && chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -253,12 +253,12 @@ cd
 apt install -y libxml-parser-perl
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/issue.net"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/p4p4l3o/vip/main/issue.net"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 #install bbr dan optimasi kernel
-wget https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://raw.githubusercontent.com/p4p4l3o/vip/main/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -280,41 +280,41 @@ netfilter-persistent reload
 download script
 cd /usr/bin
 if [ -f "/home/email_cf.conf" ]; then
-	wget -O add-host "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/add-cf.sh"
+	wget -O add-host "https://raw.githubusercontent.com/p4p4l3o/vip/main/add-cf.sh"
 else
 	echo "Original Domain Script"
-	wget -O add-host "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/add-host.sh"
+	wget -O add-host "https://raw.githubusercontent.com/p4p4l3o/vip/main/add-host.sh"
 fi
-wget -O about "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/about.sh"
-wget -O menu "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/trial.sh"
-wget -O htrial "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/htrial.sh"
-wget -O hapus "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/member.sh"
-wget -O delete "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/info.sh"
-wget -O ram "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/clear-log.sh"
-wget -O change-port "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/port-ssl.sh"
-wget -O port-tr "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/port-vless.sh"
-wget -O wbmn "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/webmin.sh"
-wget -O running "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/running.sh"
-wget -O welcomeadmin "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/welcomeadmin.sh"
-wget -O xp-ssl "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/xp-ssl.sh"
+wget -O about "https://raw.githubusercontent.com/p4p4l3o/vip/main/about.sh"
+wget -O menu "https://raw.githubusercontent.com/p4p4l3o/vip/main/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/p4p4l3o/vip/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/p4p4l3o/vip/main/trial.sh"
+wget -O htrial "https://raw.githubusercontent.com/p4p4l3o/vip/main/htrial.sh"
+wget -O hapus "https://raw.githubusercontent.com/p4p4l3o/vip/main/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/p4p4l3o/vip/main/member.sh"
+wget -O delete "https://raw.githubusercontent.com/p4p4l3o/vip/main/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/p4p4l3o/vip/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/p4p4l3o/vip/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/p4p4l3o/vip/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/p4p4l3o/vip/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/p4p4l3o/vip/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/p4p4l3o/vip/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/p4p4l3o/vip/main/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/p4p4l3o/vip/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/p4p4l3o/vip/main/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/p4p4l3o/vip/main/clear-log.sh"
+wget -O change-port "https://raw.githubusercontent.com/p4p4l3o/vip/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/p4p4l3o/vip/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/p4p4l3o/vip/main/port-ssl.sh"
+wget -O port-tr "https://raw.githubusercontent.com/p4p4l3o/vip/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/p4p4l3o/vip/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/p4p4l3o/vip/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/p4p4l3o/vip/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/p4p4l3o/vip/main/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/p4p4l3o/vip/main/webmin.sh"
+wget -O running "https://raw.githubusercontent.com/p4p4l3o/vip/main/running.sh"
+wget -O welcomeadmin "https://raw.githubusercontent.com/p4p4l3o/vip/main/welcomeadmin.sh"
+wget -O xp-ssl "https://raw.githubusercontent.com/p4p4l3o/vip/main/xp-ssl.sh"
 
 chmod +x add-host
 chmod +x menu

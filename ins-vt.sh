@@ -16,7 +16,7 @@ date
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
 # install v2ray
-wget https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/go.sh && chmod +x go.sh && ./go.sh
+wget https://raw.githubusercontent.com/p4p4l3o/vip/main/go.sh && chmod +x go.sh && ./go.sh
 #Finish
 bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
 mkdir /root/.acme.sh
@@ -532,21 +532,21 @@ systemctl enable v2ray
 systemctl restart xray
 systemctl enable xray
 cd /usr/bin
-wget -O add-ws "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/add-ws.sh"
-wget -O add-vless "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/add-vless.sh"
-wget -O add-tr "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/add-tr.sh"
-wget -O del-ws "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/del-ws.sh"
-wget -O del-vless "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/del-vless.sh"
-wget -O del-tr "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/del-tr.sh"
-wget -O cek-ws "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/cek-ws.sh"
-wget -O cek-vless "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/cek-vless.sh"
-wget -O cek-tr "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/cek-tr.sh"
-wget -O renew-ws "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/renew-ws.sh"
-wget -O renew-tr "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/renew-tr.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/cert.sh"
-wget -O xp-tr "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/xp-tr.sh"
-wget -O xp-vless "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/xp-vless.sh"
-wget -O xp-ws "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/xp-ws.sh"
+wget -O add-ws "https://raw.githubusercontent.com/p4p4l3o/vip/main/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/p4p4l3o/vip/main/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/p4p4l3o/vip/main/add-tr.sh"
+wget -O del-ws "https://raw.githubusercontent.com/p4p4l3o/vip/main/del-ws.sh"
+wget -O del-vless "https://raw.githubusercontent.com/p4p4l3o/vip/main/del-vless.sh"
+wget -O del-tr "https://raw.githubusercontent.com/p4p4l3o/vip/main/del-tr.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/p4p4l3o/vip/main/cek-ws.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/p4p4l3o/vip/main/cek-vless.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/p4p4l3o/vip/main/cek-tr.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/p4p4l3o/vip/main/renew-ws.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/p4p4l3o/vip/main/renew-tr.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/p4p4l3o/vip/main/cert.sh"
+wget -O xp-tr "https://raw.githubusercontent.com/p4p4l3o/vip/main/xp-tr.sh"
+wget -O xp-vless "https://raw.githubusercontent.com/p4p4l3o/vip/main/xp-vless.sh"
+wget -O xp-ws "https://raw.githubusercontent.com/p4p4l3o/vip/main/xp-ws.sh"
 
 chmod +x add-ws
 chmod +x add-vless

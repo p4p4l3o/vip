@@ -4,7 +4,7 @@ curl https://rclone.org/install.sh | bash
 
 printf "q\n" | rclone config
 
-wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/p4p4l3o/vip/main/rclone.conf"
 
 git clone https://github.com/magnific0/wondershaper.git
 
@@ -54,17 +54,17 @@ chown -R www-data:www-data /etc/msmtprc
 
 cd /usr/bin
 
-wget -O autobackup "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/autobackup.sh"
+wget -O autobackup "https://raw.githubusercontent.com/p4p4l3o/vip/main/autobackup.sh"
 
-wget -O backup "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/backup.sh"
+wget -O backup "https://raw.githubusercontent.com/p4p4l3o/vip/main/backup.sh"
 
-wget -O bckp "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/bckp.sh"
+wget -O bckp "https://raw.githubusercontent.com/p4p4l3o/vip/main/bckp.sh"
 
-wget -O restore "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/restore.sh"
+wget -O restore "https://raw.githubusercontent.com/p4p4l3o/vip/main/restore.sh"
 
-wget -O strt "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/strt.sh"
+wget -O strt "https://raw.githubusercontent.com/p4p4l3o/vip/main/strt.sh"
 
-wget -O limit-speed "https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/limit-speed.sh"
+wget -O limit-speed "https://raw.githubusercontent.com/p4p4l3o/vip/main/limit-speed.sh"
 
 chmod +x autobackup
 

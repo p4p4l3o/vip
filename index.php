@@ -4,6 +4,6 @@
 <br><br>
 - apt update && apt upgrade -y --fix-missing && update-grub && sleep 2 && reboot
 <br><br>
-- sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/AKUNGITHUBMU/NAMAFOLDERGITHUB/master/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh
+- sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/p4p4l3o/vip/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh
 <br><br>
 - sed -i -e 's/\r$//' setup.sh
