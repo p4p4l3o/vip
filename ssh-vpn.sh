@@ -87,6 +87,8 @@ apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rs
 echo "clear" >>.profile
 echo "neofetch | lolcat && welcomeadmin" >>.profile
 
+apt install python
+
 # install webserver
 apt -y install nginx
 cd
