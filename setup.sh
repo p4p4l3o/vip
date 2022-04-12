@@ -38,18 +38,18 @@ custom() {
 }
 
 onscript() {
-	wget https://raw.githubusercontent.com/p4p4l3o/vip/main/install_cf.sh && chmod +x install_cf.sh && ./install_cf.sh && rm -f /root/install_cf.sh
+	wget https://raw.githubusercontent.com/p4p4l3o/vip/main/install_cf.sh && chmod +x install_cf.sh && sed -i -e 's/\r$//' install_cf.sh && ./install_cf.sh && rm -f /root/install_cf.sh
 	Install_sc
 	log_install
 }
 Install_sc() {
 	#install ssh ovpn
-	wget https://raw.githubusercontent.com/p4p4l3o/vip/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh && rm -f /root/ssh-vpn.sh
+	wget https://raw.githubusercontent.com/p4p4l3o/vip/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && sed -i -e 's/\r$//' ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh && rm -f /root/ssh-vpn.sh
 	#install edu
-	wget https://raw.githubusercontent.com/p4p4l3o/vip/main/websocket.sh && chmod +x websocket.sh && screen -S websocket ./websocket.sh && rm -f /root/websocket.sh
+	wget https://raw.githubusercontent.com/p4p4l3o/vip/main/websocket.sh && chmod +x websocket.sh && sed -i -e 's/\r$//' websocket.sh && screen -S websocket ./websocket.sh && rm -f /root/websocket.sh
 	#install v2ray
-	wget https://raw.githubusercontent.com/p4p4l3o/vip/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh && rm -f /root/ins-vt.sh
-	wget https://raw.githubusercontent.com/p4p4l3o/vip/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh && rm -f /root/set-br.sh
+	wget https://raw.githubusercontent.com/p4p4l3o/vip/main/ins-vt.sh && chmod +x ins-vt.sh && sed -i -e 's/\r$//' ins-vt.sh && screen -S v2ray ./ins-vt.sh && rm -f /root/ins-vt.sh
+	wget https://raw.githubusercontent.com/p4p4l3o/vip/main/set-br.sh && chmod +x set-br.sh && sed -i -e 's/\r$//' set-br.sh && ./set-br.sh && rm -f /root/set-br.sh
 }
 log_install() {
 	history -c
