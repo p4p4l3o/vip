@@ -20,15 +20,15 @@ touch /etc/trojan/akun.conf
 wget https://raw.githubusercontent.com/p4p4l3o/vip/main/go.sh && chmod +x go.sh && ./go.sh
 #Finish
 bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
+cd
 apt install -y socat
-cd /root/
-wget https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
-bash acme.sh --install
-rm acme.sh
-cd .acme.sh
-bash acme.sh --register-account -m gratisan009@gmail.com
-bash acme.sh --issue --standalone -d $domain --force
-bash acme.sh --installcert -d $domain --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key
+curl https://get.acme.sh | sh
+alias acme.sh=~/.acme.sh/acme.sh
+acme.sh --upgrade --auto-upgrade
+acme.sh --set-default-ca --server letsencrypt
+acme.sh --issue -d $domain --standalone --keylength ec-256
+acme.sh --install-cert -d $domain --ecc --fullchain-file /etc/v2ray/v2ray.crt --key-file /etc/v2ray/v2ray.key
+chown -R nobody:nogroup /etc/v2ray
 service squid start
 uuid=$(cat /proc/sys/kernel/random/uuid)
 cat >/etc/v2ray/config.json <<END
